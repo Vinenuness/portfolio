@@ -34,7 +34,7 @@ window.PORTFOLIO_DATA = {
 
   /* ------------------------------------------------------- contatos -- */
   contacts: {
-    linkedin: 'https://linkedin.com/in/vinicius-nunes-da-silva-204979268',
+    linkedin: 'https://www.linkedin.com/in/vinicius-nunes-da-silva-2049792b8/',
     linkedinLabel: 'linkedin.com/in/vinicius-nunes-da-silva',
     github: 'https://github.com/Vinenuness',
     githubLabel: 'github.com/Vinenuness',

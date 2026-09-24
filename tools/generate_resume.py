@@ -56,7 +56,7 @@ story += [
   Paragraph('VINICIUS NUNES DA SILVA', S['name']),
   Paragraph('Analista de Tecnologia da Informação', S['role']),
   Paragraph('Garça/SP · Disponível para mudança e remoto &nbsp;|&nbsp; vininunesilva3@gmail.com &nbsp;|&nbsp; '
-            '(14) 99139-6525 &nbsp;|&nbsp; linkedin.com/in/vinicius-nunes-da-silva-204979268 &nbsp;|&nbsp; '
+            '(14) 99139-6525 &nbsp;|&nbsp; www.linkedin.com/in/vinicius-nunes-da-silva-2049792b8 &nbsp;|&nbsp; '
             'github.com/Vinenuness', S['contact']),
   Paragraph('“Transformando problemas de TI em soluções práticas, eficientes e automatizadas.”', S['tag']),
 ]
