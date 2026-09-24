@@ -202,6 +202,39 @@ window.PORTFOLIO_DATA = {
     metrics: ['15h/semana economizadas', '30% menos tempo de implantação']
   },
 
+  /* ------------------------------------------------ outros projetos -- */
+  moreProjects: {
+    title: 'Outros projetos',
+    lead: 'Ferramentas e sites que desenvolvi para resolver problemas reais — do suporte ao site de cliente.',
+    items: [
+      {
+        icon: 'pulse',
+        title: 'Limpa Rede',
+        tag: 'Ferramenta Windows',
+        text: 'Ferramenta gratuita de diagnóstico e reparo de rede: simulação de reparos antes de executar, limpeza de cache DNS, verificação do arquivo hosts com backup e logs de todas as operações. Foco em segurança e transparência.',
+        tags: ['Python', 'Windows', 'Redes', 'DNS'],
+        link: { href: 'https://github.com/Vinenuness/Limpa-rede', label: 'Ver no GitHub' },
+        highlight: 'Download disponível — release v1.0.1'
+      },
+      {
+        icon: 'laptop',
+        title: 'IT Helpdesk Toolkit',
+        tag: 'Web app · Suporte',
+        text: 'Aplicação web em Flask que reúne ferramentas de diagnóstico usadas no dia a dia do suporte: teste de ping e DNS, informações de rede e do sistema, uso de CPU, memória e disco, com geração automática de relatório.',
+        tags: ['Python', 'Flask', 'HTML/CSS/JS'],
+        link: { href: 'https://github.com/Vinenuness/it-helpdesk-toolkit-web', label: 'Ver no GitHub' }
+      },
+      {
+        icon: 'building',
+        title: 'Zion Studio Arquitetura',
+        tag: 'Site institucional',
+        text: 'Site completo desenvolvido para o Zion Studio, escritório de arquitetura e interiores: apresentação do escritório, portfólio de projetos e contato direto via WhatsApp.',
+        tags: ['HTML', 'CSS', 'JavaScript'],
+        link: { href: 'https://github.com/Vinenuness/zion-arquitetura', label: 'Ver código' }
+      }
+    ]
+  },
+
   /* --------------------------------------------------------- ativoFix */
   ativofix: {
     title: 'AtivoFix',

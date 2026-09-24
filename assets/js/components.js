@@ -49,7 +49,9 @@
     laptop: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="16" height="11.5" rx="1.8"/><path d="M2.5 19.5h19"/></svg>',
     tools: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
     search: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>',
-    health: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-4.5 4 9 2-4.5h6"/></svg>'
+    health: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-4.5 4 9 2-4.5h6"/></svg>',
+    pulse: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    building: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>'
   };
 
   /* navegação -------------------------------------------------------- */
@@ -262,6 +264,36 @@
       </section>`;
   }
 
+  /* outros projetos ------------------------------------------------------ */
+  function renderMoreProjects() {
+    const m = D.moreProjects;
+    if (!m) return '';
+    const cards = m.items.map(p => {
+      const tags = p.tags.map(t => h`<span class="tag tag--neutral">${t}</span>`).join('');
+      return h`
+        <article class="card reveal more-card">
+          <span class="card-icon" aria-hidden="true">${raw(icon[p.icon] || '')}</span>
+          <p class="more-tag">${p.tag}</p>
+          <h3 class="card-title">${p.title}</h3>
+          <p class="card-text">${p.text}</p>
+          <div class="skill-tags">${raw(tags)}</div>
+          ${p.highlight ? raw(h`<p class="more-highlight">${p.highlight}</p>`) : ''}
+          <a class="more-link" href="${p.link.href}" target="_blank" rel="noopener noreferrer">${p.link.label} ${raw(icon.arrow)}</a>
+        </article>`;
+    }).join('');
+    return h`
+      <section class="section" id="projetos-mais">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">GitHub</span>
+            <h2 class="section-title">${m.title}</h2>
+            <p class="section-lead">${m.lead}</p>
+          </div>
+          <div class="cards-grid">${raw(cards)}</div>
+        </div>
+      </section>`;
+  }
+
   /* competências --------------------------------------------------------- */
   function renderSkills() {
     const groups = D.skills.groups.map((g, i) => {
@@ -412,7 +444,7 @@
   /* API pública ----------------------------------------------------------------- */
   window.PORTFOLIO_COMPONENTS = {
     renderNav, renderHero, renderMetrics, renderContribute, renderAbout,
-    renderExperience, renderProject, renderSkills, renderMindset,
+    renderExperience, renderProject, renderMoreProjects, renderSkills, renderMindset,
     renderHealth, renderEducation, renderContact, renderFooter
   };
 })();

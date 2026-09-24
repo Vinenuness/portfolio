@@ -13,7 +13,7 @@
     ['[data-mount="nav"]', C.renderNav],
     ['[data-mount="main"]', () => [
       C.renderHero(), C.renderMetrics(), C.renderContribute(), C.renderAbout(),
-      C.renderExperience(), C.renderProject(), C.renderSkills(), C.renderMindset(),
+      C.renderExperience(), C.renderProject(), C.renderMoreProjects(), C.renderSkills(), C.renderMindset(),
       C.renderHealth(), C.renderEducation(), C.renderContact()
     ].join('')],
     ['[data-mount="footer"]', C.renderFooter]
