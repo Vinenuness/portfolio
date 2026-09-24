@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AtivoFix — Case | Vinicius Nunes | Analista de TI</title>
+  <meta name="description" content="Case do AtivoFix: plataforma interna de gestão de TI que centraliza inventário, chamados, usuários, unidades, automações e relatórios. Desenvolvido por Vinicius Nunes, Analista de TI.">
+  <meta name="author" content="Vinicius Nunes da Silva">
+  <meta name="theme-color" content="#0A0E14">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Vinicius Nunes — Analista de TI">
+  <meta property="og:title" content="AtivoFix — Case de gestão de TI | Vinicius Nunes">
+  <meta property="og:description" content="Como centralizei inventário, chamados, usuários, unidades, automações e relatórios em uma única plataforma interna.">
+  <meta property="og:url" content="https://vinenuness.github.io/portfolio/projetos/ativofix/">
+  <meta property="og:image" content="../../assets/img/og-ativofix.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AtivoFix — Case de gestão de TI | Vinicius Nunes">
+  <meta name="twitter:description" content="Plataforma interna de gestão de TI: inventário, chamados, automações e relatórios em um único ambiente.">
+  <meta name="twitter:image" content="../../assets/img/og-ativofix.png">
+
+  <link rel="icon" href="../../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AtivoFix",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Windows",
+    "author": { "@type": "Person", "name": "Vinicius Nunes da Silva", "jobTitle": "Analista de Tecnologia da Informação" },
+    "url": "https://github.com/Vinenuness/ativofix",
+    "description": "Plataforma interna de gestão de TI: inventário de computadores, chamados, usuários, unidades, automações e relatórios."
+  }
+  </script>
+</head>
+<body data-page="ativofix" data-base="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div data-mount="nav"></div>
+
+  <main id="conteudo">
+    <section class="case-hero">
+      <div class="container case-hero-inner">
+        <a class="back-link" href="../../index.html#projetos">← Voltar ao portfólio</a>
+        <p class="project-label">Case de projeto</p>
+        <h1 class="case-title" data-bind="ativofix.title">AtivoFix</h1>
+        <p class="case-subtitle" data-bind="ativofix.subtitle">Case: plataforma interna de gestão de TI</p>
+        <p class="case-hero-text" data-bind="ativofix.heroText"></p>
+        <div class="case-meta">
+          <span><span class="dot" aria-hidden="true"></span><span data-bind="ativofix.status"></span></span>
+          <span>👤 Autor: Vinicius Nunes</span>
+          <span>🏢 Desenvolvido para uso corporativo interno</span>
+        </div>
+        <div class="case-tags" data-list="featuredProject.tech"></div>
+        <nav class="case-nav" aria-label="Seções do case">
+          <a href="#problema">Problema</a>
+          <a href="#solucao">Solução</a>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#arquitetura">Arquitetura</a>
+          <a href="#tecnologias">Tecnologias</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="#desafios">Desafios</a>
+          <a href="#github">GitHub</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="case-section" id="problema">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">01</span><span data-bind="ativofix.sections.problem.title"></span></h2>
+        <ul class="case-list case-list--problem" data-list="ativofix.sections.problem.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="solucao">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">02</span><span data-bind="ativofix.sections.solution.title"></span></h2>
+        <ul class="case-list" data-list="ativofix.sections.solution.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="funcionalidades">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">03</span><span data-bind="ativofix.sections.features.title"></span></h2>
+        <ul class="case-list" data-list="ativofix.sections.features.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="arquitetura">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">04</span><span data-bind="ativofix.sections.architecture.title"></span></h2>
+        <div class="pipeline" role="img" aria-label="Fluxo do AtivoFix" data-pipeline="ativofix.sections.architecture.flow"></div>
+        <ul class="case-list" data-list="ativofix.sections.architecture.items"></ul>
+      </div>
+    </section>
+    <section class="case-section" id="tecnologias">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">05</span><span data-bind="ativofix.sections.tech.title"></span></h2>
+        <div class="tech-table" data-tech="ativofix.sections.tech.items"></div>
+      </div>
+    </section>
+
+    <section class="case-section" id="screenshots">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">06</span><span data-bind="ativofix.sections.screenshots.title"></span></h2>
+        <div class="case-shots" data-shots="ativofix.sections.screenshots.items"></div>
+        <p class="case-note" data-bind="ativofix.sections.screenshots.note"></p>
+      </div>
+    </section>
+
+    <section class="case-section" id="seguranca">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">07</span><span data-bind="ativofix.sections.security.title"></span></h2>
+        <ul class="case-list" data-list="ativofix.sections.security.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="desafios">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">08</span><span data-bind="ativofix.sections.challenges.title"></span></h2>
+        <ul class="case-list" data-list="ativofix.sections.challenges.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="aprendizados">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">09</span><span data-bind="ativofix.sections.learnings.title"></span></h2>
+        <ul class="case-list" data-list="ativofix.sections.learnings.items"></ul>
+      </div>
+    </section>
+
+    <section class="case-section" id="github">
+      <div class="container">
+        <h2 class="section-title"><span class="case-num">10</span>GitHub</h2>
+        <p style="color:var(--text-dim);max-width:680px;">O código do projeto está disponível publicamente no GitHub, incluindo a documentação de arquitetura e instruções de implantação.</p>
+        <div class="project-cta">
+          <a class="btn btn--primary" href="https://github.com/Vinenuness/ativofix" target="_blank" rel="noopener noreferrer">Ver projeto no GitHub</a>
+          <a class="btn btn--outline" href="../../index.html#projetos">Voltar ao portfólio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-footer-cta">
+      <div class="container">
+        <h2>Vamos conversar sobre tecnologia?</h2>
+        <p data-bind="contact.lead"></p>
+        <div class="contact-actions" data-contacts>
+          <a class="btn btn--blue" href="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn--outline" href="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--primary" href="email">Enviar e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-mount="footer"></div>
+
+  <script src="../../assets/js/data.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

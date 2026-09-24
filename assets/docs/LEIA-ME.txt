@@ -1,0 +1,22 @@
+COMO SUBSTITUIR O CURRÍCULO
+===========================
+
+O botão "Baixar currículo" do site aponta para:
+
+    assets/docs/curriculo-vinicius-nunes.pdf
+
+Enquanto o PDF definitivo não é publicado, este diretório contém um
+arquivo provisório (uma página em branco no formato PDF). Os caminhos
+já estão configurados em:
+
+    assets/js/data.js  ->  profile.cv.file
+
+PASSOS PARA PUBLICAR O CURRÍCULO REAL
+-------------------------------------
+1. Exporte seu currículo em PDF.
+2. Renomeie o arquivo para:  curriculo-vinicius-nunes.pdf
+3. Substitua o arquivo provisório deste diretório mantendo o mesmo nome.
+4. Pronto — nenhuma alteração de código é necessária.
+
+Se preferir usar outro nome de arquivo, atualize também o caminho em
+assets/js/data.js (chave "profile.cv.file").
