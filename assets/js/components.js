@@ -378,7 +378,7 @@
           <p class="cert-name" style="margin:0">${c.name}</p>
           ${c.detail ? raw(h`<p class="cert-detail" style="margin:0">${c.detail}</p>`) : ''}
         </div>
-        ${c.hours ? raw(h`<span class="cert-hours">${c.hours}</span>`) : ''}
+        ${c.hours ? raw(h`<span class="cert-hours">${c.hours}</span>`) : (c.area ? raw(h`<span class="cert-area">${c.area}</span>`) : '')}
       </article>`).join('');
     return h`
       <section class="section section--soft" id="formacao">

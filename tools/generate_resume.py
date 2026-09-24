@@ -29,12 +29,12 @@ S = {
  'role':    ParagraphStyle('role', fontName='Helvetica-Bold', fontSize=11.5, leading=14, textColor=BLUE, alignment=TA_CENTER, spaceBefore=2),
  'contact': ParagraphStyle('contact', fontName='Helvetica', fontSize=8.6, leading=11.5, textColor=MUTE, alignment=TA_CENTER),
  'tag':     ParagraphStyle('tag', fontName='Helvetica-Oblique', fontSize=9.2, leading=12, textColor=INK, alignment=TA_CENTER, spaceBefore=4),
- 'h2':      ParagraphStyle('h2', fontName='Helvetica-Bold', fontSize=10.3, leading=12, textColor=DARK, spaceBefore=9, spaceAfter=2),
- 'body':    ParagraphStyle('body', fontName='Helvetica', fontSize=8.8, leading=11.6, textColor=INK),
+ 'h2':      ParagraphStyle('h2', fontName='Helvetica-Bold', fontSize=10.3, leading=12, textColor=DARK, spaceBefore=7, spaceAfter=2),
+ 'body':    ParagraphStyle('body', fontName='Helvetica', fontSize=8.8, leading=11.2, textColor=INK),
  'job':     ParagraphStyle('job', fontName='Helvetica-Bold', fontSize=9.4, leading=12, textColor=DARK, spaceBefore=4),
- 'meta':    ParagraphStyle('meta', fontName='Helvetica', fontSize=8.2, leading=10.5, textColor=MUTE, spaceBefore=1),
- 'bullet':  ParagraphStyle('bullet', fontName='Helvetica', fontSize=8.6, leading=11.2, textColor=INK, leftIndent=10, bulletIndent=2, spaceBefore=1),
- 'comp':    ParagraphStyle('comp', fontName='Helvetica', fontSize=8.4, leading=11.4, textColor=INK, spaceBefore=1.5),
+ 'meta':    ParagraphStyle('meta', fontName='Helvetica', fontSize=8.2, leading=10.2, textColor=MUTE, spaceBefore=1),
+ 'bullet':  ParagraphStyle('bullet', fontName='Helvetica', fontSize=8.6, leading=10.9, textColor=INK, leftIndent=10, bulletIndent=2, spaceBefore=1),
+ 'comp':    ParagraphStyle('comp', fontName='Helvetica', fontSize=8.1, leading=10.5, textColor=INK, spaceBefore=1),
 }
 
 def h2(text):
@@ -66,8 +66,8 @@ story += h2('RESUMO')
 story.append(Paragraph(
   'Profissional de TI com atuação em suporte N1/N2/N3, infraestrutura, operações e automação. '
   'Experiência em implantação de sistemas hospitalares, administração de ambientes Windows/Linux e Nextcloud, '
-  'com desenvolvimento de soluções internas em Python e uso de dados (SQL, Excel, Power BI) para apoiar decisões. '
-  'Formação em Gestão de T.I. e Engenharia de Software, com base técnica em Eletrônica.', S['body']))
+  'com soluções internas em Python e uso de dados (SQL, Excel, Power BI) para apoiar decisões. '
+  'MBA em Gestão de T.I. e pós em Engenharia de Software, com base técnica em Eletrônica.', S['body']))
 
 # ------------------------------------------------------------ experiência
 story += h2('EXPERIÊNCIA PROFISSIONAL')
@@ -107,12 +107,18 @@ for degree, school in edu:
 # ------------------------------------------------------------ certificações
 story += h2('CERTIFICAÇÕES E CURSOS')
 certs = [
-  'Hackers do Bem — Cibersegurança (144h)',
-  'Dell Technical Support — HW, SW & Infra',
-  'Google Technical Support Fundamentals',
-  'Análise de Dados e BI — Power BI, R e Excel',
-  'Programação Python',
-  'Administração de BD & Lógica de Programação',
+  'Suporte técnico para hardware e software — Dell Technologies (2026)',
+  'Technical Diagnostics and Troubleshooting — Microsoft (2026)',
+  'Google Technical Support Fundamentals — Coursera (2024)',
+  'Hackers do Bem — Formação e Nivelamento em Cibersegurança — RNP (2024)',
+  'Por Dentro da Segurança Cibernética — Senai (2024)',
+  'Análise de Dados no Power BI (2 cursos) — Fundação Bradesco (2024)',
+  'Visualização de Dados Aplicada à Transformação Digital — ENAP (2023)',
+  'Análise de Dados em Linguagem R — ENAP (2024)',
+  'Fundamentos de Data Science e IA — Data Science Academy (2024)',
+  'Programação Python do Zero ao Avançado — Udemy (2024)',
+  'Aprendendo com Python — ENAP (2023)',
+  'Lógica de Programação — Senai (2024)',
 ]
 rows = [[Paragraph(certs[i], S['comp']), Paragraph(certs[i + 1], S['comp'])] for i in range(0, len(certs), 2)]
 t = Table(rows, colWidths=[95 * mm, 78 * mm])

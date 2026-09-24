@@ -516,6 +516,11 @@ button { font-family: inherit; }
   margin-left: auto; flex: none; font-family: var(--mono); font-size: .74rem;
   color: var(--pink); border: 1px solid rgba(232, 121, 249, .3); padding: 2px 9px; border-radius: 7px 7px 7px 2px;
 }
+.cert-area {
+  margin-left: auto; flex: none; font-family: var(--mono); font-size: .64rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--violet-soft);
+  border: 1px solid var(--line); padding: 3px 9px; border-radius: 7px 7px 7px 2px;
+}
 
 /* ------------------------------------------------------ contato ------- */
 .contact { text-align: center; }

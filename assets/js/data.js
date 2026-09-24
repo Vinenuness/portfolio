@@ -400,15 +400,29 @@ window.PORTFOLIO_DATA = {
   /* -------------------------------------------------- certificacoes - */
   certifications: {
     title: 'Certificações e cursos',
-    lead: 'Formações complementares em segurança, suporte, dados e programação.',
+    lead: 'Formações complementares em suporte, segurança, dados e programação.',
     items: [
-      { name: 'Hackers do Bem — Formação & Nivelamento em Cibersegurança', hours: '144h',
-        area: 'Segurança' },
-      { name: 'Dell Technical Support', detail: 'Hardware, Software & Infrastructure', area: 'Suporte' },
-      { name: 'Google Technical Support Fundamentals', detail: '', area: 'Suporte' },
-      { name: 'Análise de Dados e Business Intelligence', detail: 'Power BI, R e Excel', area: 'Dados' },
-      { name: 'Programação Python', detail: '', area: 'Automação' },
-      { name: 'Administração de Banco de Dados & Lógica de Programação', detail: '', area: 'Dados' }
+      /* suporte */
+      { name: 'Suporte técnico para hardware', detail: 'Dell Technologies · 2026', area: 'Suporte' },
+      { name: 'Suporte técnico para software', detail: 'Dell Technologies · 2026', area: 'Suporte' },
+      { name: 'Technical Diagnostics and Troubleshooting Techniques', detail: 'Microsoft · 2026', area: 'Suporte' },
+      { name: 'Google Technical Support Fundamentals', detail: 'Coursera · 2024', area: 'Suporte' },
+      { name: 'Introdução à carreira de suporte técnico', detail: 'Dell Technologies · 2026', area: 'Suporte' },
+      { name: 'Introdução aos computadores', detail: 'Microsoft · 2026', area: 'Suporte' },
+      /* segurança */
+      { name: 'Hackers do Bem — Curso Básico de Formação em Cibersegurança', detail: 'RNP · 2024', area: 'Segurança' },
+      { name: 'Hackers do Bem — Curso de Nivelamento em Cibersegurança', detail: 'RNP · 2024', area: 'Segurança' },
+      { name: 'Por Dentro da Segurança Cibernética', detail: 'Senai São Paulo · 2024', area: 'Segurança' },
+      /* dados */
+      { name: 'Análise de Dados no Power BI', detail: 'Fundação Bradesco · 2024', area: 'Dados' },
+      { name: 'Introdução à Análise de Dados — Microsoft Power BI', detail: 'Fundação Bradesco · 2024', area: 'Dados' },
+      { name: 'Visualização de Dados Aplicada à Transformação Digital', detail: 'ENAP · 2023', area: 'Dados' },
+      { name: 'Análise de Dados em Linguagem R', detail: 'ENAP · 2024', area: 'Dados' },
+      { name: 'Fundamentos de Data Science e Inteligência Artificial', detail: 'Data Science Academy · 2024', area: 'Dados' },
+      /* programação */
+      { name: 'Programação Python do Zero ao Avançado + Projetos Reais', detail: 'Udemy · 2024', area: 'Automação' },
+      { name: 'Aprendendo com Python', detail: 'ENAP · 2023', area: 'Automação' },
+      { name: 'Competência Transversal — Lógica de Programação', detail: 'Senai São Paulo · 2024', area: 'Automação' }
     ]
   },
 
