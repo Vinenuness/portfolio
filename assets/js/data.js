@@ -26,7 +26,7 @@ window.PORTFOLIO_DATA = {
     photo: 'assets/img/profile.jpg',
     photoAlt: 'Foto profissional de Vinicius Nunes',
     cv: {
-      /* SUBSTITUIR: coloque o PDF real em assets/docs/curriculo-vinicius-nunes.pdf */
+      /* Currículo em PDF — regenerar com: python tools/generate_resume.py */
       file: 'assets/docs/curriculo-vinicius-nunes.pdf',
       label: 'Baixar currículo'
     }
@@ -58,17 +58,17 @@ window.PORTFOLIO_DATA = {
     title: 'Como posso contribuir',
     lead: 'Áreas onde atuo hoje e onde posso gerar resultado desde o primeiro dia.',
     cards: [
-      { icon: '🖥️', title: 'Suporte de TI',
+      { icon: 'desktop', title: 'Suporte de TI',
         text: 'Suporte N1/N2/N3, troubleshooting, atendimento a usuários, resolução de incidentes e gestão de chamados.' },
-      { icon: '🌐', title: 'Infraestrutura',
+      { icon: 'network', title: 'Infraestrutura',
         text: 'Ambientes Windows/Linux, redes, servidores, backup, serviços e administração de ambientes.' },
-      { icon: '⚙️', title: 'Automação',
+      { icon: 'gear', title: 'Automação',
         text: 'Python, scripts, automação de tarefas repetitivas e desenvolvimento de ferramentas internas.' },
-      { icon: '🚀', title: 'Implantação',
+      { icon: 'rocket', title: 'Implantação',
         text: 'Análise de infraestrutura, testes, implantação de sistemas e acompanhamento pós-go-live.' },
-      { icon: '🔐', title: 'Segurança',
+      { icon: 'shield', title: 'Segurança',
         text: 'Controle de acesso, segurança da informação, LGPD, gestão de incidentes e boas práticas.' },
-      { icon: '📊', title: 'Dados',
+      { icon: 'chart', title: 'Dados',
         text: 'Power BI, Excel, SQL, análise de dados e indicadores.' }
     ]
   },
@@ -193,7 +193,7 @@ window.PORTFOLIO_DATA = {
       'Infraestrutura', 'API', 'Relatórios'
     ],
     tech: ['Python', 'Flask', 'SQLite', 'REST API', 'Windows Agent', 'Linux', 'Nginx', 'JavaScript'],
-    /* SUBSTITUIR/AMPLIAR: adicione mais screenshots reais em assets/img/screenshots/ */
+    /* Screenshots reais da aplicação em assets/img/screenshots/ */
     screenshots: [
       { src: 'assets/img/screenshots/tela-login.jpg', alt: 'Tela de login do AtivoFix com destaque para inventário automático, chamados por unidade e relatórios em PDF', cap: 'Tela de acesso — painel administrativo (AtivoFix v2.0)' },
       { src: 'assets/img/screenshots/abrir-chamado.jpg', alt: 'Portal do usuário do AtivoFix para abertura de chamado sem login, com empresa, unidade, prioridade e anexos', cap: 'Portal do usuário — abertura de chamado sem login' }
@@ -308,21 +308,21 @@ window.PORTFOLIO_DATA = {
     title: 'Competências',
     lead: 'Tecnologias e práticas organizadas por área de atuação.',
     groups: [
-      { name: 'Suporte e Operações', icon: '🖥️',
+      { name: 'Suporte e Operações', icon: 'desktop',
         items: ['Suporte N1/N2/N3', 'Troubleshooting', 'Gestão de chamados', 'Atendimento a usuários',
                 'Implantação de sistemas', 'Documentação'] },
-      { name: 'Infraestrutura', icon: '🌐',
+      { name: 'Infraestrutura', icon: 'network',
         items: ['Windows', 'Linux', 'Redes', 'Servidores', 'Nextcloud', 'Backup', 'Nginx', 'VPN'] },
-      { name: 'Automação', icon: '⚙️',
+      { name: 'Automação', icon: 'gear',
         items: ['Python', 'Scripts', 'Batch', 'PowerShell', 'Agentes Windows'] },
-      { name: 'Desenvolvimento', icon: '💻',
+      { name: 'Desenvolvimento', icon: 'laptop',
         items: ['Python', 'Flask', 'SQL', 'REST API', 'PHP', 'HTML', 'CSS', 'JavaScript'] },
-      { name: 'Dados', icon: '📊',
+      { name: 'Dados', icon: 'chart',
         items: ['Power BI', 'Excel Avançado', 'SQL', 'Pandas', 'NumPy', 'Linguagem R'] },
-      { name: 'Segurança e Governança', icon: '🔐',
+      { name: 'Segurança e Governança', icon: 'shield',
         items: ['Cibersegurança', 'LGPD', 'Controle de acesso', 'Gestão de incidentes',
                 'Análise de vulnerabilidades', 'ITIL', 'COBIT'] },
-      { name: 'Ferramentas', icon: '🧰',
+      { name: 'Ferramentas', icon: 'tools',
         items: ['Git/GitHub', 'Nextcloud', 'TOTVS Protheus', 'AnyDesk', 'Microsoft 365', 'Jira'] }
     ]
   },
@@ -332,10 +332,10 @@ window.PORTFOLIO_DATA = {
     title: 'Como eu penso TI',
     lead: 'Um ciclo simples que aplico no dia a dia da operação.',
     pillars: [
-      { icon: '🔎', name: 'ENTENDER', text: 'Antes de buscar uma solução, entender o problema e seu impacto.' },
-      { icon: '🛠️', name: 'RESOLVER', text: 'Buscar soluções práticas, estáveis e adequadas ao ambiente.' },
-      { icon: '⚙️', name: 'AUTOMATIZAR', text: 'Identificar tarefas repetitivas e buscar formas de reduzir trabalho manual.' },
-      { icon: '📊', name: 'MELHORAR', text: 'Documentar, medir resultados e buscar melhoria contínua.' }
+      { icon: 'search', name: 'ENTENDER', text: 'Antes de buscar uma solução, entender o problema e seu impacto.' },
+      { icon: 'tools', name: 'RESOLVER', text: 'Buscar soluções práticas, estáveis e adequadas ao ambiente.' },
+      { icon: 'gear', name: 'AUTOMATIZAR', text: 'Identificar tarefas repetitivas e buscar formas de reduzir trabalho manual.' },
+      { icon: 'chart', name: 'MELHORAR', text: 'Documentar, medir resultados e buscar melhoria contínua.' }
     ]
   },
 

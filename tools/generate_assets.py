@@ -141,15 +141,15 @@ def hexc(h):
     h = h.lstrip('#')
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
-# cores da paleta
-BG     = hexc('0A0E14')
-GRID   = hexc('121A28')
-BORDER = hexc('22304A')
-WHITE  = hexc('F1F5F9')
-CYAN   = hexc('22D3EE')
-BLUE   = hexc('3B82F6')
-GRAY   = hexc('94A3B8')
-GRAY2  = hexc('64748B')
+# cores da paleta (nomes legados VIOLET/MAGENTA mantidos por compatibilidade)
+BG     = hexc('0C0915')
+GRID   = hexc('1A1226')
+BORDER = hexc('322452')
+WHITE  = hexc('F2EFF9')
+VIOLET  = hexc('A78BFA')
+MAGENTA = hexc('E879F9')
+GRAY   = hexc('C0B6D4')
+GRAY2  = hexc('8B7FA6')
 
 def backdrop(c, step=80):
     for x in range(0, c.w, step):
@@ -161,13 +161,13 @@ def backdrop(c, step=80):
 
 # ---------------------------------------------------------------- favicon
 def monogram(scale):
-    c = Canvas(64, 64, hexc('0B0F17'))
-    c.outline(0, 0, 64, 64, hexc('1B2941'))
+    c = Canvas(64, 64, hexc('120C1E'))
+    c.outline(0, 0, 64, 64, hexc('2E2247'))
     w = 2 * (5 * scale) + scale          # "VN" com 1*scale de gap
     h = 7 * scale
     x, y = (64 - w) // 2, (64 - h) // 2
     c.text(x, y, 'V', scale, WHITE)
-    c.text(x + 6 * scale, y, 'N', scale, CYAN)
+    c.text(x + 6 * scale, y, 'N', scale, VIOLET)
     return c
 
 def write_ico(path, canvases):
@@ -212,39 +212,39 @@ def main():
     write_ico(os.path.join(out, 'favicon.ico'), [monogram(1), monogram(2), monogram(3)])
     sizes['favicon.ico'] = os.path.getsize(os.path.join(out, 'favicon.ico'))
     # apple touch icon 180x180
-    ap = Canvas(180, 180, hexc('0B0F17'))
-    ap.outline(0, 0, 180, 180, hexc('16233B'))
+    ap = Canvas(180, 180, hexc('120C1E'))
+    ap.outline(0, 0, 180, 180, hexc('2E2247'))
     sc = 12
     w = 2 * (5 * sc) + sc; h = 7 * sc
     ap.text((180 - w) // 2, (180 - h) // 2, 'V', sc, WHITE)
-    ap.text((180 - w) // 2 + 6 * sc, (180 - h) // 2, 'N', sc, CYAN)
+    ap.text((180 - w) // 2 + 6 * sc, (180 - h) // 2, 'N', sc, VIOLET)
     sizes['apple-touch-icon.png'] = ap.save(os.path.join(out, 'apple-touch-icon.png'))
 
     # favicon vetorial (svg de fallback moderno)
     with open(os.path.join(out, 'favicon.svg'), 'w', encoding='utf-8') as f:
         f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
-                '<rect width="64" height="64" rx="12" fill="#0B0F17"/>'
-                '<rect x="1" y="1" width="62" height="62" rx="11" fill="none" stroke="#1B2941"/>'
+                '<rect width="64" height="64" rx="12" fill="#120C1E"/>'
+                '<rect x="1" y="1" width="62" height="62" rx="11" fill="none" stroke="#2E2247"/>'
                 '<text x="30" y="42" font-family="Arial,Helvetica,sans-serif" font-size="28" '
-                'font-weight="700" fill="#F1F5F9" text-anchor="middle">V</text>'
+                'font-weight="700" fill="#F2EFF9" text-anchor="middle">V</text>'
                 '<text x="46" y="42" font-family="Arial,Helvetica,sans-serif" font-size="28" '
-                'font-weight="700" fill="#22D3EE" text-anchor="middle">N</text></svg>')
+                'font-weight="700" fill="#A78BFA" text-anchor="middle">N</text></svg>')
 
     # ------------------------------------------------ OG principal 1200x630
     og = Canvas(1200, 630, BG)
     backdrop(og)
-    og.rect(64, 64, 10, 10, CYAN)
-    og.text(86, 61, 'PORTFÓLIO PROFISSIONAL', 3, CYAN, tracking=4)
-    og.rect(48, 130, 4, 190, CYAN)
+    og.rect(64, 64, 10, 10, VIOLET)
+    og.text(86, 61, 'PORTFÓLIO PROFISSIONAL', 3, VIOLET, tracking=4)
+    og.rect(48, 130, 4, 190, VIOLET)
     og.text(72, 130, 'VINICIUS', 11, WHITE)
     og.text(72, 226, 'NUNES', 11, WHITE)
-    og.text(72, 340, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 3, hexc('7DD3FC'))
+    og.text(72, 340, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 3, hexc('F0ABFC'))
     og.rect(64, 392, 700, 1, BORDER)
     og.text(64, 416, 'SUPORTE · INFRAESTRUTURA · AUTOMAÇÃO · OPERAÇÕES DE TI', 3, GRAY, tracking=1)
-    og.chip(64, 468, 'SUPORTE N1/N2/N3', 3, hexc('7DD3FC'), BORDER)
+    og.chip(64, 468, 'SUPORTE N1/N2/N3', 3, hexc('F0ABFC'), BORDER)
     og.chip(64, 524, '15H/SEMANA ECONOMIZADAS COM AUTOMAÇÕES', 3, GRAY, BORDER)
     og.text(64, 580, 'GARÇA-SP · DISPONÍVEL PARA MUDANÇA E REMOTO', 3, GRAY2, tracking=1)
-    og.rect(0, 624, 1200, 6, CYAN)
+    og.rect(0, 624, 1200, 6, VIOLET)
 
     # foto real do perfil (quando existir) na imagem de compartilhamento
     img = og.to_pil()
@@ -263,17 +263,17 @@ def main():
     # ------------------------------------------------ OG AtivoFix 1200x630
     og2 = Canvas(1200, 630, BG)
     backdrop(og2)
-    og2.rect(64, 64, 10, 10, BLUE)
-    og2.text(86, 61, 'PROJETO EM DESTAQUE', 3, BLUE, tracking=4)
-    og2.text(64, 130, 'ATIVOFIX', 14, CYAN)
+    og2.rect(64, 64, 10, 10, MAGENTA)
+    og2.text(86, 61, 'PROJETO EM DESTAQUE', 3, MAGENTA, tracking=4)
+    og2.text(64, 130, 'ATIVOFIX', 14, VIOLET)
     og2.text(64, 268, 'PLATAFORMA INTERNA DE GESTÃO DE TI', 5, WHITE)
     og2.rect(64, 350, 1072, 1, BORDER)
     og2.text(64, 378, 'INVENTÁRIO · CHAMADOS · USUÁRIOS · UNIDADES · AUTOMAÇÕES · RELATÓRIOS', 3, GRAY, tracking=1)
     x = 64
     for label in ['PYTHON', 'FLASK', 'SQLITE', 'REST API', 'WINDOWS AGENT', 'NGINX']:
-        x += og2.chip(x, 430, label, 3, hexc('7DD3FC'), BORDER) + 14
+        x += og2.chip(x, 430, label, 3, hexc('F0ABFC'), BORDER) + 14
     og2.text(64, 540, 'DESENVOLVIDO POR VINICIUS NUNES · ANALISTA DE TI', 3, GRAY2, tracking=2)
-    og2.rect(0, 624, 1200, 6, BLUE)
+    og2.rect(0, 624, 1200, 6, MAGENTA)
     sizes['og-ativofix.png'] = og2.save(os.path.join(out, 'img', 'og-ativofix.png'))
 
     # folha de verificacao visual (base64, para abrir no preview)

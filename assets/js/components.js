@@ -39,7 +39,17 @@
     pin: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
     clock: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
     shield: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10Z"/></svg>',
-    check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+    check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>',
+    desktop: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+    network: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.5 4.1 5.5 4.1 9s-1.4 6.5-4.1 9c-2.7-2.5-4.1-5.5-4.1-9S9.3 5.5 12 3Z"/></svg>',
+    gear: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>',
+    rocket: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c2.9 2 4.4 5 4.4 8.4 0 1.4-.3 2.8-.8 4H8.4a11 11 0 0 1-.8-4c0-3.4 1.5-6.4 4.4-8.4Z"/><circle cx="12" cy="9.5" r="1.7"/><path d="M8.5 15.2 7 18.8l3.2-1.2M15.5 15.2l1.5 3.6-3.2-1.2M12 15.5V21"/></svg>',
+    shield: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10Z"/><path d="m9 11.5 2 2 4-4"/></svg>',
+    chart: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16h16"/><path d="M8.5 15.5v-4M12.5 15.5V7.5M16.5 15.5v-6"/></svg>',
+    laptop: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="16" height="11.5" rx="1.8"/><path d="M2.5 19.5h19"/></svg>',
+    tools: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+    search: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>',
+    health: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-4.5 4 9 2-4.5h6"/></svg>'
   };
 
   /* navegação -------------------------------------------------------- */
@@ -75,7 +85,11 @@
       <section class="hero" id="inicio">
         <div class="container hero-grid">
           <div>
-            <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>${p.status}</span>
+            <p class="hero-hello">
+              <span class="hand">Olá, eu sou</span>
+              <svg class="arrow-doodle" width="28" height="24" viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3c1.5 8 5.5 13 12 16"/><path d="m10.5 16.5 5.5 2.5-.5-6"/></svg>
+              <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>${p.status}</span>
+            </p>
             <h1>${p.name}<span class="accent">.</span></h1>
             <p class="hero-role">${p.title}</p>
             <p class="hero-spec">${p.specialties}</p>
@@ -113,7 +127,7 @@
   function renderContribute() {
     const cards = D.contribute.cards.map(c => h`
       <article class="card reveal">
-        <span class="card-icon" aria-hidden="true">${c.icon}</span>
+        <span class="card-icon" aria-hidden="true">${raw(icon[c.icon] || '')}</span>
         <h3 class="card-title">${c.title}</h3>
         <p class="card-text">${c.text}</p>
       </article>`).join('');
@@ -256,7 +270,7 @@
       return h`
         <article class="skill-card${accent} reveal">
           <div class="skill-head">
-            <span class="card-icon" aria-hidden="true">${g.icon}</span>
+            <span class="card-icon" aria-hidden="true">${raw(icon[g.icon] || '')}</span>
             <h3>${g.name}</h3>
           </div>
           <div class="skill-tags">${raw(tags)}</div>
@@ -280,7 +294,7 @@
     const pillars = D.mindset.pillars.map((p, i) => h`
       <article class="pillar reveal">
         <span class="pillar-step" aria-hidden="true">0${i + 1}</span>
-        <span class="pillar-icon" aria-hidden="true">${p.icon}</span>
+        <span class="pillar-icon" aria-hidden="true">${raw(icon[p.icon] || '')}</span>
         <h3>${p.name}</h3>
         <p>${p.text}</p>
       </article>`).join('');
@@ -303,7 +317,7 @@
       <section class="section" id="saude" aria-label="${D.health.title}">
         <div class="container">
           <div class="health-note reveal">
-            <span class="health-icon" aria-hidden="true">🏥</span>
+            <span class="health-icon" aria-hidden="true">${raw(icon.health)}</span>
             <div>
               <h3>${D.health.title}</h3>
               <p>${D.health.text}</p>
@@ -388,6 +402,7 @@
       <footer class="footer">
         <div class="container footer-inner">
           <span>© ${new Date().getFullYear()} ${D.profile.fullName}</span>
+          <span class="hand">obrigado pela visita!</span>
           <span>${D.footer.note}</span>
           <span>${D.footer.builtWith}</span>
         </div>

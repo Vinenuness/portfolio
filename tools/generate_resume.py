@@ -18,11 +18,11 @@ from reportlab.lib.units import mm
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'docs', 'curriculo-vinicius-nunes.pdf')
 
-INK   = HexColor('#1E293B')   # texto
-DARK  = HexColor('#0F172A')   # nomes/títulos
-BLUE  = HexColor('#1D4ED8')   # acentos
-MUTE  = HexColor('#64748B')   # metadados
-LINE  = HexColor('#CBD5E1')   # filetes
+INK   = HexColor('#1A2233')   # texto
+DARK  = HexColor('#171126')   # nomes/títulos
+BLUE  = HexColor('#6D28D9')   # acentos (violeta, alinhado ao site)
+MUTE  = HexColor('#6B6480')   # metadados
+LINE  = HexColor('#D8D2E6')   # filetes
 
 S = {
  'name':    ParagraphStyle('name', fontName='Helvetica-Bold', fontSize=19, leading=22, textColor=DARK, alignment=TA_CENTER),
@@ -137,7 +137,7 @@ comps = [
   ('Ferramentas', 'Git/GitHub · TOTVS Protheus · AnyDesk · Microsoft 365 · Jira'),
 ]
 for name, items in comps:
-    story.append(Paragraph(f'<b><font color="#1D4ED8">{name}:</font></b> {items}', S['comp']))
+    story.append(Paragraph(f'<b><font color="#6D28D9">{name}:</font></b> {items}', S['comp']))
 
 # ------------------------------------------------------------ build
 def footer(canvas, doc):
