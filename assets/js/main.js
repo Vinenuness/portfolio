@@ -86,8 +86,8 @@
       el.innerHTML = arr.map((s, i) =>
         '<figure class="shot" style="margin:0">' +
         '<img src="' + BASE + s.src + '" alt="' + String(s.alt).replace(/"/g, '&quot;') + '" loading="lazy">' +
-        '<figcaption class="shot-cap">Screenshot ' + String(i + 1).padStart(2, '0') +
-        ' — substituir por captura real</figcaption></figure>').join('');
+        '<figcaption class="shot-cap">' + (s.cap || ('Screenshot ' + String(i + 1).padStart(2, '0'))) +
+        '</figcaption></figure>').join('');
     });
 
     /* tabela de tecnologias: data-tech="caminho.para.array" */

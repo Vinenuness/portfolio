@@ -201,7 +201,7 @@
     const shots = p.screenshots.map((s, i) => h`
       <figure class="shot" style="margin:0">
         <img src="${s.src}" alt="${s.alt}" loading="lazy">
-        <figcaption class="shot-cap">Screenshot 0${i + 1} — substituir por captura real do sistema</figcaption>
+        <figcaption class="shot-cap">${s.cap || ('Screenshot 0' + (i + 1))}</figcaption>
       </figure>`).join('');
     const metrics = p.metrics.map(m =>
       h`<span class="project-metric">${raw(icon.check)} ${m}</span>`).join('');

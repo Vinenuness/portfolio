@@ -193,10 +193,10 @@ window.PORTFOLIO_DATA = {
       'Infraestrutura', 'API', 'Relatórios'
     ],
     tech: ['Python', 'Flask', 'SQLite', 'REST API', 'Windows Agent', 'Linux', 'Nginx', 'JavaScript'],
-    /* SUBSTITUIR: coloque screenshots reais em assets/img/screenshots/ */
+    /* SUBSTITUIR/AMPLIAR: adicione mais screenshots reais em assets/img/screenshots/ */
     screenshots: [
-      { src: 'assets/img/screenshots/placeholder-1.svg', alt: 'Screenshot do AtivoFix — placeholder (substituir por imagem real)' },
-      { src: 'assets/img/screenshots/placeholder-2.svg', alt: 'Screenshot do AtivoFix — placeholder (substituir por imagem real)' }
+      { src: 'assets/img/screenshots/tela-login.jpg', alt: 'Tela de login do AtivoFix com destaque para inventário automático, chamados por unidade e relatórios em PDF', cap: 'Tela de acesso — painel administrativo (AtivoFix v2.0)' },
+      { src: 'assets/img/screenshots/abrir-chamado.jpg', alt: 'Portal do usuário do AtivoFix para abertura de chamado sem login, com empresa, unidade, prioridade e anexos', cap: 'Portal do usuário — abertura de chamado sem login' }
     ],
     links: { project: 'https://github.com/Vinenuness/ativofix', case: 'projetos/ativofix/' },
     metrics: ['15h/semana economizadas', '30% menos tempo de implantação']
@@ -264,13 +264,12 @@ window.PORTFOLIO_DATA = {
           { name: 'JavaScript', role: 'Interatividade da interface' }
         ]
       },
-      /* SUBSTITUIR: imagens reais do projeto em assets/img/screenshots/ */
       screenshots: {
         title: 'Screenshots',
-        note: 'Espaço reservado para imagens reais da aplicação em produção.',
+        note: 'Capturas reais da aplicação em produção — painel administrativo e portal do usuário.',
         items: [
-          { src: 'assets/img/screenshots/placeholder-1.svg', alt: 'AtivoFix — screenshot placeholder 1' },
-          { src: 'assets/img/screenshots/placeholder-2.svg', alt: 'AtivoFix — screenshot placeholder 2' }
+          { src: 'assets/img/screenshots/tela-login.jpg', alt: 'Tela de login do AtivoFix com destaque para inventário automático, chamados por unidade e relatórios em PDF', cap: 'Tela de acesso — painel administrativo (AtivoFix v2.0)' },
+          { src: 'assets/img/screenshots/abrir-chamado.jpg', alt: 'Portal do usuário do AtivoFix para abertura de chamado sem login, com empresa, unidade, prioridade e anexos', cap: 'Portal do usuário — abertura de chamado sem login' }
         ]
       },
       security: {
