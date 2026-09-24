@@ -68,11 +68,15 @@ python tools/serve.py        # http://localhost:8787
 2. Settings → Pages → Source: branch `main`, pasta `/ (root)`.
 3. Atualize `data.js → siteUrl` e as URLs canônicas/OG nos `<head>` com o endereço final.
 
-## Regenerar assets (favicon / Open Graph)
+## Regenerar assets e currículo
 
 ```bash
-python tools/generate_assets.py
+python tools/generate_assets.py    # favicon + imagens Open Graph
+python tools/generate_resume.py    # currículo em PDF (1 página A4)
 ```
+
+> O conteúdo do currículo espelha o `data.js`; ao alterar o portfólio,
+> atualize também `tools/generate_resume.py` e regenere o PDF.
 
 ## Checklist de qualidade
 
