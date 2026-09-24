@@ -271,7 +271,7 @@ button { font-family: inherit; }
 .fact-sub { font-size: .84rem; color: var(--text-mute); }
 
 /* ---------------------------------------------------- timeline -------- */
-.timeline { position: relative; padding-left: 34px; }
+.timeline { position: relative; padding-left: 34px; list-style: none; }
 .timeline::before {
   content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px;
   width: 2px; background: linear-gradient(180deg, var(--cyan), rgba(59, 130, 246, .35), transparent);

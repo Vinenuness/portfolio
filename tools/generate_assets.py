@@ -133,6 +133,10 @@ class Canvas:
             f.write(png)
         return len(png)
 
+    def to_pil(self):
+        from PIL import Image
+        return Image.frombytes('RGB', (self.w, self.h), bytes(self.buf))
+
 def hexc(h):
     h = h.lstrip('#')
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
@@ -231,17 +235,30 @@ def main():
     backdrop(og)
     og.rect(64, 64, 10, 10, CYAN)
     og.text(86, 61, 'PORTFÓLIO PROFISSIONAL', 3, CYAN, tracking=4)
-    og.rect(48, 140, 4, 178, CYAN)
-    og.text(72, 140, 'VINICIUS NUNES', 11, WHITE)
-    og.text(72, 252, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 4, hexc('7DD3FC'))
-    og.rect(64, 340, 1072, 1, BORDER)
-    og.text(64, 368, 'SUPORTE · INFRAESTRUTURA · AUTOMAÇÃO · OPERAÇÕES DE TI', 3, GRAY, tracking=2)
-    x = 64
-    for label in ['SUPORTE N1/N2/N3', 'INFRAESTRUTURA', 'AUTOMAÇÃO']:
-        x += og.chip(x, 420, label, 3, GRAY, BORDER) + 16
-    og.text(64, 540, 'GARÇA-SP · ABERTO A MUDANÇA E REMOTO', 3, GRAY2, tracking=2)
+    og.rect(48, 130, 4, 190, CYAN)
+    og.text(72, 130, 'VINICIUS', 11, WHITE)
+    og.text(72, 226, 'NUNES', 11, WHITE)
+    og.text(72, 340, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 3, hexc('7DD3FC'))
+    og.rect(64, 392, 700, 1, BORDER)
+    og.text(64, 416, 'SUPORTE · INFRAESTRUTURA · AUTOMAÇÃO · OPERAÇÕES DE TI', 3, GRAY, tracking=1)
+    og.chip(64, 468, 'SUPORTE N1/N2/N3', 3, hexc('7DD3FC'), BORDER)
+    og.chip(64, 524, '15H/SEMANA ECONOMIZADAS COM AUTOMAÇÕES', 3, GRAY, BORDER)
+    og.text(64, 580, 'GARÇA-SP · DISPONÍVEL PARA MUDANÇA E REMOTO', 3, GRAY2, tracking=1)
     og.rect(0, 624, 1200, 6, CYAN)
-    sizes['og-image.png'] = og.save(os.path.join(out, 'img', 'og-image.png'))
+
+    # foto real do perfil (quando existir) na imagem de compartilhamento
+    img = og.to_pil()
+    photo_path = os.path.join(out, 'img', 'profile.jpg')
+    if os.path.exists(photo_path):
+        from PIL import Image, ImageDraw
+        side = 330
+        px_, py_ = 1200 - 64 - side, 118
+        photo = Image.open(photo_path).convert('RGB').resize((side, side), Image.LANCZOS)
+        mask = Image.new('L', (side, side), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, side, side], radius=42, fill=255)
+        img.paste(photo, (px_, py_), mask)
+    img.save(os.path.join(out, 'img', 'og-image.png'), optimize=True)
+    sizes['og-image.png'] = os.path.getsize(os.path.join(out, 'img', 'og-image.png'))
 
     # ------------------------------------------------ OG AtivoFix 1200x630
     og2 = Canvas(1200, 630, BG)

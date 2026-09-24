@@ -23,8 +23,8 @@ window.PORTFOLIO_DATA = {
     location: 'Garça - SP',
     availability: 'Mudança / Remoto',
     status: 'Aberto a novas oportunidades',
-    photo: 'assets/img/profile-placeholder.svg',
-    photoAlt: 'Foto profissional de Vinicius Nunes (placeholder até a foto real ser adicionada)',
+    photo: 'assets/img/profile.jpg',
+    photoAlt: 'Foto profissional de Vinicius Nunes',
     cv: {
       /* SUBSTITUIR: coloque o PDF real em assets/docs/curriculo-vinicius-nunes.pdf */
       file: 'assets/docs/curriculo-vinicius-nunes.pdf',
