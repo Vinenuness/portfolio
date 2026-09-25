@@ -12,8 +12,9 @@
   const mounts = [
     ['[data-mount="nav"]', C.renderNav],
     ['[data-mount="main"]', () => [
-      C.renderHero(), C.renderMetrics(), C.renderContribute(), C.renderAbout(),
-      C.renderExperience(), C.renderProject(), C.renderMoreProjects(), C.renderSkills(), C.renderMindset(),
+      C.renderHero(), C.renderMetrics(), C.renderContribute(),
+      C.renderExperience(), C.renderProject(), C.renderMoreProjects(), C.renderSkills(),
+      C.renderAbout(), C.renderMindset(),
       C.renderHealth(), C.renderEducation(), C.renderContact()
     ].join('')],
     ['[data-mount="footer"]', C.renderFooter]
@@ -102,7 +103,7 @@
     /* links de contato escritos como "linkedin"/"github"/"email" */
     document.querySelectorAll('[data-contacts] a').forEach(a => {
       const key = a.getAttribute('href');
-      const map = { linkedin: D.contacts.linkedin, github: D.contacts.github, email: 'mailto:' + D.contacts.email };
+      const map = { linkedin: D.contacts.linkedin, github: D.contacts.github, whatsapp: D.contacts.whatsapp, email: 'mailto:' + D.contacts.email };
       if (map[key]) a.setAttribute('href', map[key]);
     });
 

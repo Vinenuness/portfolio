@@ -197,7 +197,13 @@ button { font-family: inherit; }
   letter-spacing: .05em; margin-bottom: 24px;
 }
 .hero-spec b { color: var(--pink); font-weight: 500; }
-.hero-text { color: var(--text-dim); max-width: 600px; font-size: 1.06rem; margin-bottom: 30px; }
+.hero-text { color: var(--text-dim); max-width: 600px; font-size: 1.06rem; margin-bottom: 10px; }
+.hero-loc {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: .84rem; color: var(--text-mute);
+  letter-spacing: .04em; margin-bottom: 26px;
+}
+.hero-loc svg { color: var(--magenta); flex: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -224,6 +230,11 @@ button { font-family: inherit; }
   color: #fff; box-shadow: 0 8px 24px rgba(109, 40, 217, .3);
 }
 .btn--blue:hover { filter: brightness(1.12); color: #fff; transform: translateY(-1px); }
+.btn--wa {
+  background: rgba(74, 222, 128, .08); border-color: rgba(74, 222, 128, .35); color: #86EFAC;
+}
+.btn--wa:hover { background: rgba(74, 222, 128, .16); color: #BBF7D0; border-color: rgba(74, 222, 128, .55); }
+.btn--wa svg { color: var(--green); }
 .btn--lg { padding: 16px 28px; font-size: 1rem; }
 
 /* retrato */
@@ -255,7 +266,7 @@ button { font-family: inherit; }
 
 /* ---------------------------------------------------- métricas -------- */
 .metrics { border-bottom: 1px solid var(--line); background: var(--bg-soft); }
-.metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 .metric {
   display: flex; flex-direction: column; gap: 6px;
   padding: 40px 34px; border-left: 1px solid var(--line);

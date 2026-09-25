@@ -50,7 +50,8 @@ window.PORTFOLIO_DATA = {
   /* APENAS números documentados — não inventar outros. */
   metrics: [
     { value: '15h/semana', label: 'Economia estimada com automações' },
-    { value: '30%', label: 'Redução no tempo de implantação de sistemas' }
+    { value: '30%', label: 'Redução no tempo de implantação de sistemas' },
+    { value: '4+ anos', label: 'Em TI — do freelance ao suporte N3 hospitalar' }
   ],
 
   /* ---------------------------------------------------- contribuicao - */
@@ -391,9 +392,7 @@ window.PORTFOLIO_DATA = {
       { degree: 'Graduação em Análise e Desenvolvimento de Sistemas', school: 'UNIVEM — Marília/SP',
         type: 'Graduação', period: '', note: '' },
       { degree: 'Técnico em Eletrônica', school: 'ETEC Monsenhor Antônio Magliano — Garça/SP',
-        type: 'Técnico', period: '', note: '' },
-      { degree: 'Bacharelado em Engenharia Civil', school: 'Instituição não informada',
-        type: 'Incompleto', period: '', note: 'Incompleto — 4 anos cursados' }
+        type: 'Técnico', period: '', note: '' }
     ]
   },
 
@@ -433,6 +432,7 @@ window.PORTFOLIO_DATA = {
     status: 'Disponível para oportunidades em TI',
     buttons: {
       linkedin: { label: 'LinkedIn' },
+      whatsapp: { label: 'WhatsApp' },
       github: { label: 'GitHub' },
       email: { label: 'Enviar e-mail' }
     }
@@ -447,10 +447,10 @@ window.PORTFOLIO_DATA = {
   /* --------------------------------------------------- navegacao ---- */
   nav: [
     { label: 'Início', href: '#inicio' },
-    { label: 'Sobre', href: '#sobre' },
     { label: 'Experiência', href: '#experiencia' },
-    { label: 'Competências', href: '#competencias' },
     { label: 'Projetos', href: '#projetos' },
+    { label: 'Competências', href: '#competencias' },
+    { label: 'Sobre', href: '#sobre' },
     { label: 'Formação', href: '#formacao' },
     { label: 'Contato', href: '#contato' }
   ],
