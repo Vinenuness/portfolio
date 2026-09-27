@@ -23,8 +23,8 @@ window.PORTFOLIO_DATA = {
     location: 'Garça - SP',
     availability: 'Mudança / Remoto',
     status: 'Aberto a novas oportunidades',
-    photo: 'assets/img/profile.jpg',
-    photoAlt: 'Foto profissional de Vinicius Nunes',
+    photo: 'assets/img/avatar.jpg',
+    photoAlt: 'Avatar ilustrado de Vinicius Nunes com headset, em estilo animação',
     cv: {
       /* Currículo em PDF — regenerar com: python tools/generate_resume.py */
       file: 'assets/docs/curriculo-vinicius-nunes.pdf',
@@ -49,9 +49,9 @@ window.PORTFOLIO_DATA = {
   /* --------------------------------------------------- indicadores --- */
   /* APENAS números documentados — não inventar outros. */
   metrics: [
-    { value: '15h/semana', label: 'Economia estimada com automações' },
-    { value: '30%', label: 'Redução no tempo de implantação de sistemas' },
-    { value: '4+ anos', label: 'Em TI — do freelance ao suporte N3 hospitalar' }
+    { value: '15h/semana', label: 'Economia estimada com automações', src: 'Resultado da experiência profissional' },
+    { value: '30%', label: 'Redução no tempo de implantação de sistemas', src: 'Resultado da experiência profissional' },
+    { value: '4+ anos', label: 'Em TI — do freelance ao suporte N3 hospitalar', src: 'Trajetória profissional' }
   ],
 
   /* ---------------------------------------------------- contribuicao - */
@@ -208,6 +208,15 @@ window.PORTFOLIO_DATA = {
     title: 'Outros projetos',
     lead: 'Ferramentas e sites que desenvolvi para resolver problemas reais — do suporte ao site de cliente.',
     items: [
+      {
+        icon: 'bolt',
+        title: 'Wind Optimizer',
+        tag: 'Ferramenta Windows · PowerShell',
+        text: 'Otimização e manutenção automática para Windows 10/11, feita para máquinas antigas ou com pouca RAM: diagnóstico com perfil de hardware, backup com ponto de restauração, limpeza segura, DISM/SFC e relatório antes × depois — com rollback exato de cada alteração.',
+        tags: ['PowerShell', 'Windows', 'WPF', 'Automação'],
+        link: { href: 'https://github.com/Vinenuness/optimizer-win', label: 'Ver no GitHub' },
+        highlight: 'Release v1.0.0 disponível para download'
+      },
       {
         icon: 'pulse',
         title: 'Limpa Rede',

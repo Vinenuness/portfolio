@@ -52,6 +52,7 @@
     search: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>',
     health: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-4.5 4 9 2-4.5h6"/></svg>',
     pulse: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    bolt: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>',
     building: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>'
   };
 
@@ -106,12 +107,13 @@
             </div>
             <div class="hero-tags" aria-label="Principais competências">${raw(tags)}</div>
           </div>
-          <div class="portrait-wrap">
+          <span class="portrait-wrap">
             <figure class="portrait" style="margin:0">
               <img src="${p.photo}" alt="${p.photoAlt}" width="320" height="320">
               ${/placeholder/i.test(p.photo) ? raw('<figcaption class="portrait-badge">Foto profissional em breve</figcaption>') : ''}
             </figure>
-          </div>
+            <span class="hand portrait-note" aria-hidden="true">pronto pro suporte! ;)</span>
+          </span>
         </div>
       </section>`;
   }
@@ -122,7 +124,7 @@
       <div class="metric">
         <span class="metric-value">${m.value}</span>
         <span class="metric-label">${m.label}</span>
-        <span class="metric-src">Resultado da experiência profissional</span>
+        <span class="metric-src">${m.src || 'Resultado da experiência profissional'}</span>
       </div>`).join('');
     return h`<section class="metrics" aria-label="Resultados profissionais"><div class="container metrics-grid">${raw(items)}</div></section>`;
   }
