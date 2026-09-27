@@ -24,7 +24,7 @@ window.PORTFOLIO_DATA = {
     availability: 'Mudança / Remoto',
     status: 'Aberto a novas oportunidades',
     photo: 'assets/img/avatar.jpg',
-    photoAlt: 'Avatar ilustrado de Vinicius Nunes com headset, em estilo animação',
+    photoAlt: 'Avatar ilustrado de Vinicius Nunes com headset e áreas de TI ao fundo',
     cv: {
       /* Currículo em PDF — regenerar com: python tools/generate_resume.py */
       file: 'assets/docs/curriculo-vinicius-nunes.pdf',
