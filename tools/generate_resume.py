@@ -20,7 +20,7 @@ OUT = os.path.join(ROOT, 'assets', 'docs', 'curriculo-vinicius-nunes.pdf')
 
 INK   = HexColor('#1A2233')   # texto
 DARK  = HexColor('#171126')   # nomes/títulos
-BLUE  = HexColor('#6D28D9')   # acentos (violeta, alinhado ao site)
+BLUE  = HexColor('#1D4ED8')   # acentos (azul corporativo, alinhado ao site)
 MUTE  = HexColor('#6B6480')   # metadados
 LINE  = HexColor('#D8D2E6')   # filetes
 
@@ -54,7 +54,7 @@ story = []
 # ------------------------------------------------------------ cabeçalho
 story += [
   Paragraph('VINICIUS NUNES DA SILVA', S['name']),
-  Paragraph('Analista de Tecnologia da Informação', S['role']),
+  Paragraph('Analista de TI | Infraestrutura | Automação | Desenvolvimento', S['role']),
   Paragraph('Garça/SP · Disponível para mudança e remoto &nbsp;|&nbsp; vininunesilva3@gmail.com &nbsp;|&nbsp; '
             '(14) 99139-6525 &nbsp;|&nbsp; www.linkedin.com/in/vinicius-nunes-da-silva-2049792b8 &nbsp;|&nbsp; '
             'github.com/Vinenuness', S['contact']),
@@ -64,9 +64,9 @@ story += [
 # ------------------------------------------------------------ resumo
 story += h2('RESUMO')
 story.append(Paragraph(
-  'Profissional de TI com atuação em suporte N1/N2/N3, infraestrutura, operações e automação. '
+  'Profissional de TI com atuação em suporte N1/N2/N3, infraestrutura, automação e desenvolvimento. '
   'Experiência em implantação de sistemas hospitalares, administração de ambientes Windows/Linux e Nextcloud, '
-  'com soluções internas em Python e uso de dados (SQL, Excel, Power BI) para apoiar decisões. '
+  'com soluções internas em Python, integrações em nuvem (AWS) e uso de dados (SQL, Excel, Power BI) para apoiar decisões. '
   'MBA em Gestão de T.I. e pós em Engenharia de Software, com base técnica em Eletrônica.', S['body']))
 
 # ------------------------------------------------------------ experiência
@@ -139,11 +139,12 @@ comps = [
   ('Automação', 'Python · Scripts · Batch · PowerShell · Agentes Windows'),
   ('Desenvolvimento', 'Python · Flask · SQL · REST API · PHP · HTML/CSS · JavaScript'),
   ('Dados', 'Power BI · Excel Avançado · SQL · Pandas · NumPy · R'),
+  ('Cloud', 'AWS · AWS Glue · SageMaker · API Gateway'),
   ('Segurança e Governança', 'LGPD · Controle de acesso · Gestão de incidentes · Análise de vulnerabilidades · ITIL · COBIT'),
   ('Ferramentas', 'Git/GitHub · TOTVS Protheus · AnyDesk · Microsoft 365 · Jira'),
 ]
 for name, items in comps:
-    story.append(Paragraph(f'<b><font color="#6D28D9">{name}:</font></b> {items}', S['comp']))
+    story.append(Paragraph(f'<b><font color="#1D4ED8">{name}:</font></b> {items}', S['comp']))
 
 # ------------------------------------------------------------ build
 def footer(canvas, doc):
@@ -159,7 +160,7 @@ doc = SimpleDocTemplate(OUT, pagesize=A4,
                         topMargin=11 * mm, bottomMargin=14 * mm,
                         title='Currículo — Vinicius Nunes da Silva',
                         author='Vinicius Nunes da Silva',
-                        subject='Analista de Tecnologia da Informação',
-                        keywords='TI, suporte, infraestrutura, automação, Python')
+                        subject='Analista de TI | Infraestrutura | Automação | Desenvolvimento',
+                        keywords='TI, suporte, infraestrutura, automação, desenvolvimento, cloud, AWS, Python')
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
 print(f'PDF gerado: {OUT} ({os.path.getsize(OUT) // 1024} KB, {doc.page} página{"s" if doc.page > 1 else ""})')
