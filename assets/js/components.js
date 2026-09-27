@@ -53,6 +53,8 @@
     health: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-4.5 4 9 2-4.5h6"/></svg>',
     pulse: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
     bolt: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>',
+    cloud: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 .42-8.98 6.5 6.5 0 0 0-12.6 1.74A4 4 0 0 0 6 19.5h11.5Z"/></svg>',
+    chevron: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
     building: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>'
   };
 
@@ -150,7 +152,7 @@
       </section>`;
   }
 
-  /* sobre -------------------------------------------------------------- */
+  /* sobre / perfil ------------------------------------------------------- */
   function renderAbout() {
     const paras = D.about.paragraphs.map(t => h`<p>${t}</p>`).join('');
     const quote = h`<p class="about-quote">${D.profile.message}</p>`;
@@ -160,6 +162,11 @@
         <span class="fact-value">${f.value}</span>
         <span class="fact-sub">${f.sub}</span>
       </div>`).join('');
+    const photo = D.about.photoReal ? h`
+      <figure class="about-photo" style="margin:0">
+        <img src="${D.about.photoReal}" alt="${D.about.photoRealAlt}" width="280" height="280" loading="lazy">
+        <span class="hand" aria-hidden="true">prazer, esse sou eu ;)</span>
+      </figure>` : '';
     return h`
       <section class="section section--soft" id="sobre">
         <div class="container">
@@ -167,8 +174,12 @@
             <span class="eyebrow">Perfil</span>
             <h2 class="section-title">${D.about.title}</h2>
           </div>
+          <div class="about-intro">
+            ${photo ? raw(photo) : ''}
+            <div class="about-text">${raw(paras)}</div>
+          </div>
           <div class="about-grid">
-            <div class="about-text">${raw(paras)}${raw(quote)}</div>
+            <div>${raw(quote)}</div>
             <aside class="about-facts" aria-label="Resumo profissional">${raw(facts)}</aside>
           </div>
         </div>
@@ -238,6 +249,7 @@
                 <p class="project-label">Sistema interno · Em produção</p>
                 <h3 class="project-title">${p.title}</h3>
                 <p class="project-desc">${p.description}</p>
+                ${p.myRole ? raw(h`<p class="my-role"><span class="my-role-label">Meu papel</span>${p.myRole}</p>`) : ''}
                 <div class="project-cta">
                   <a class="btn btn--primary" href="${p.links.case}">Ver projeto ${raw(icon.arrow)}</a>
                   <a class="btn btn--outline" href="${p.links.project}" target="_blank" rel="noopener noreferrer">${raw(icon.github)} Repositório</a>
@@ -282,7 +294,10 @@
           <p class="card-text">${p.text}</p>
           <div class="skill-tags">${raw(tags)}</div>
           ${p.highlight ? raw(h`<p class="more-highlight">${p.highlight}</p>`) : ''}
-          <a class="more-link" href="${p.link.href}" target="_blank" rel="noopener noreferrer">${p.link.label} ${raw(icon.arrow)}</a>
+          <div class="more-actions">
+            <a class="more-link" href="${p.link.href}" target="_blank" rel="noopener noreferrer">${p.link.label} ${raw(icon.arrow)}</a>
+            ${p.download ? raw(h`<a class="more-link more-link--dl" href="${p.download.href}" target="_blank" rel="noopener noreferrer">${raw(icon.download)} ${p.download.label}</a>`) : ''}
+          </div>
         </article>`;
     }).join('');
     return h`
@@ -363,6 +378,16 @@
       </section>`;
   }
 
+  const certCard = (c) => h`
+      <article class="cert">
+        <span class="cert-icon">${raw(icon.shield)}</span>
+        <div>
+          <p class="cert-name" style="margin:0">${c.name}</p>
+          ${c.detail ? raw(h`<p class="cert-detail" style="margin:0">${c.detail}</p>`) : ''}
+        </div>
+        ${c.hours ? raw(h`<span class="cert-hours">${c.hours}</span>`) : (c.area ? raw(h`<span class="cert-area">${c.area}</span>`) : '')}
+      </article>`;
+
   /* formação --------------------------------------------------------------- */
   function renderEducation() {
     const items = D.education.items.map(e => {
@@ -375,15 +400,15 @@
           ${e.note ? raw(h`<p class="edu-note">${e.note}</p>`) : ''}
         </article>`;
     }).join('');
-    const certs = D.certifications.items.map(c => h`
-      <article class="cert">
-        <span class="cert-icon">${raw(icon.shield)}</span>
-        <div>
-          <p class="cert-name" style="margin:0">${c.name}</p>
-          ${c.detail ? raw(h`<p class="cert-detail" style="margin:0">${c.detail}</p>`) : ''}
-        </div>
-        ${c.hours ? raw(h`<span class="cert-hours">${c.hours}</span>`) : (c.area ? raw(h`<span class="cert-area">${c.area}</span>`) : '')}
-      </article>`).join('');
+    const certsAll = D.certifications.items;
+    const certsMain = certsAll.slice(0, 6).map(certCard);
+    const certsRest = certsAll.slice(6).map(certCard);
+    const moreBtn = certsRest.length ? h`
+      <div class="certs-more">
+        <button class="btn btn--outline" type="button" id="certs-toggle" aria-expanded="false" aria-controls="certs-extra">
+          Ver todos os certificados (${certsAll.length}) ${raw(icon.chevron)}
+        </button>
+      </div>` : '';
     return h`
       <section class="section section--soft" id="formacao">
         <div class="container">
@@ -398,7 +423,9 @@
             <h2 class="section-title" style="font-size:1.5rem;">${D.certifications.title}</h2>
             <p class="section-lead">${D.certifications.lead}</p>
           </div>
-          <div class="certs-grid">${raw(certs)}</div>
+          <div class="certs-grid">${raw(certsMain.join(''))}</div>
+          ${moreBtn ? raw(moreBtn) : ''}
+          <div class="certs-grid is-hidden" id="certs-extra">${raw(certsRest.join(''))}</div>
         </div>
       </section>`;
   }

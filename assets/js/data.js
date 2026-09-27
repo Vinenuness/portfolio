@@ -12,14 +12,14 @@ window.PORTFOLIO_DATA = {
   profile: {
     name: 'Vinicius Nunes',
     fullName: 'Vinicius Nunes da Silva',
-    title: 'Analista de Tecnologia da Informação',
-    specialties: 'Suporte • Infraestrutura • Automação',
+    title: 'Analista de TI | Infraestrutura | Automação | Desenvolvimento',
+    specialties: 'Suporte N1/N2/N3 • Python • Sistemas • Cloud • Dados',
     message:
       'Transformando problemas de TI em soluções práticas, eficientes e automatizadas.',
     heroText:
       'Atuação em suporte N1/N2/N3, infraestrutura, implantação de sistemas e ' +
-      'automação de processos, unindo experiência operacional e desenvolvimento ' +
-      'de soluções para resolver problemas reais de TI.',
+      'automação de processos, combinando experiência operacional com ' +
+      'desenvolvimento de soluções para resolver problemas reais de TI.',
     location: 'Garça - SP',
     availability: 'Mudança / Remoto',
     status: 'Aberto a novas oportunidades',
@@ -49,9 +49,9 @@ window.PORTFOLIO_DATA = {
   /* --------------------------------------------------- indicadores --- */
   /* APENAS números documentados — não inventar outros. */
   metrics: [
-    { value: '15h/semana', label: 'Economia estimada com automações', src: 'Resultado da experiência profissional' },
-    { value: '30%', label: 'Redução no tempo de implantação de sistemas', src: 'Resultado da experiência profissional' },
-    { value: '4+ anos', label: 'Em TI — do freelance ao suporte N3 hospitalar', src: 'Trajetória profissional' }
+    { value: '~15h/semana', label: 'Economia estimada com automações', src: 'Resultado da experiência profissional' },
+    { value: '~30%', label: 'Redução estimada no tempo de implantação de sistemas', src: 'Resultado da experiência profissional' },
+    { value: '4+ anos', label: 'Experiência profissional com tecnologia', src: 'Trajetória profissional' }
   ],
 
   /* ---------------------------------------------------- contribuicao - */
@@ -65,10 +65,10 @@ window.PORTFOLIO_DATA = {
         text: 'Ambientes Windows/Linux, redes, servidores, backup, serviços e administração de ambientes.' },
       { icon: 'gear', title: 'Automação',
         text: 'Python, scripts, automação de tarefas repetitivas e desenvolvimento de ferramentas internas.' },
+      { icon: 'laptop', title: 'Desenvolvimento',
+        text: 'Sistemas web internos, APIs REST e soluções sob demanda para problemas reais da operação.' },
       { icon: 'rocket', title: 'Implantação',
         text: 'Análise de infraestrutura, testes, implantação de sistemas e acompanhamento pós-go-live.' },
-      { icon: 'shield', title: 'Segurança',
-        text: 'Controle de acesso, segurança da informação, LGPD, gestão de incidentes e boas práticas.' },
       { icon: 'chart', title: 'Dados',
         text: 'Power BI, Excel, SQL, análise de dados e indicadores.' }
     ]
@@ -76,16 +76,15 @@ window.PORTFOLIO_DATA = {
 
   /* ------------------------------------------------------ sobre mim -- */
   about: {
-    title: 'Sobre mim',
+    title: 'Perfil profissional',
+    photoReal: 'assets/img/profile.jpg',
+    photoRealAlt: 'Foto profissional de Vinicius Nunes da Silva',
     paragraphs: [
-      'Minha trajetória em tecnologia começou com a formação técnica em Eletrônica e evoluiu para a área de ' +
-      'Tecnologia da Informação. Ao longo dessa trajetória, desenvolvi experiência em suporte técnico, ' +
-      'infraestrutura, implantação de sistemas, automação e desenvolvimento de soluções.',
-      'Atualmente atuo como Analista de TI, trabalhando com suporte, infraestrutura, sistemas e automação ' +
-      'em um ambiente corporativo.',
-      'Meu objetivo profissional é continuar evoluindo principalmente nas áreas de Suporte de TI, ' +
-      'Infraestrutura e Operações, utilizando automação e desenvolvimento como ferramentas para melhorar ' +
-      'processos e resolver problemas.'
+      'Sou Analista de TI com experiência em suporte N1/N2/N3, infraestrutura, implantação de sistemas, '
+      + 'automação e desenvolvimento de soluções internas.',
+      'Atuo em ambiente hospitalar, cuidando de suporte avançado, infraestrutura, sistemas e automação — '
+      + 'e uso desenvolvimento como ferramenta para melhorar processos e resolver problemas reais da operação.',
+      'Tenho interesse contínuo em tecnologia aplicada a operações: automação, dados e cloud aplicados ao dia a dia de TI.'
     ],
     /* mini-cards de perfil */
     highlights: [
@@ -102,22 +101,19 @@ window.PORTFOLIO_DATA = {
     lead: 'Trajetória construída do chão de operação à gestão de TI — cada etapa somando visão de processo, contato com usuário e domínio técnico.',
     items: [
       {
-        company: 'AHBB Rede Santa Casa',
-        role: 'Analista de TI — Suporte N3, Software & Infraestrutura',
-        period: 'Dez/2025 – Atual',
-        location: 'Garça - SP',
+        company: 'AHBB | Rede Santa Casa',
+        role: 'Analista de TI',
+        period: '2025 — Atual',
+        location: 'Garça/SP',
         current: true,
-        summary: 'Suporte avançado, administração de ambientes, implantação de sistemas hospitalares e automação de processos internos.',
+        summary: 'Atuação em suporte N3, infraestrutura, implantação de sistemas hospitalares, desenvolvimento de soluções internas e automação de processos.',
         activities: [
           'Desenvolvimento de sistemas web internos e scripts Python para automação',
           'Economia estimada de 15 horas semanais em processos manuais',
-          'Administração do ambiente corporativo Nextcloud',
-          'Gestão de permissões e usuários, com compartilhamento seguro de arquivos',
-          'Rotinas automatizadas de backup',
-          'Atuação relacionada à LGPD',
-          'Implantação de sistemas hospitalares: análise de infraestrutura, testes e acompanhamento pós-go-live',
-          'Redução de 30% no tempo de implantação através de mapeamento de fluxos',
-          'Alinhamento com a gestão de TI em decisões técnicas e de segurança'
+          'Administração do ambiente corporativo Nextcloud: permissões, backups e LGPD',
+          'Implantação de sistemas hospitalares: infraestrutura, testes e pós-go-live',
+          'Redução de 30% no tempo de implantação por mapeamento de fluxos',
+          'Suporte N3 e alinhamento com a gestão de TI em decisões técnicas e de segurança'
         ]
       },
       {
@@ -194,20 +190,31 @@ window.PORTFOLIO_DATA = {
       'Infraestrutura', 'API', 'Relatórios'
     ],
     tech: ['Python', 'Flask', 'SQLite', 'REST API', 'Windows Agent', 'Linux', 'Nginx', 'JavaScript'],
+    myRole: 'Arquitetura, desenvolvimento backend, agente Windows, automações e integração entre componentes.',
     /* Screenshots reais da aplicação em assets/img/screenshots/ */
     screenshots: [
       { src: 'assets/img/screenshots/tela-login.jpg', alt: 'Tela de login do AtivoFix com destaque para inventário automático, chamados por unidade e relatórios em PDF', cap: 'Tela de acesso — painel administrativo (AtivoFix v2.0)' },
       { src: 'assets/img/screenshots/abrir-chamado.jpg', alt: 'Portal do usuário do AtivoFix para abertura de chamado sem login, com empresa, unidade, prioridade e anexos', cap: 'Portal do usuário — abertura de chamado sem login' }
     ],
     links: { project: 'https://github.com/Vinenuness/ativofix', case: 'projetos/ativofix/' },
-    metrics: ['15h/semana economizadas', '30% menos tempo de implantação']
+    metrics: ['~15h/semana economizadas', '~30% menos tempo de implantação']
   },
 
   /* ------------------------------------------------ outros projetos -- */
   moreProjects: {
     title: 'Outros projetos',
-    lead: 'Ferramentas e sites que desenvolvi para resolver problemas reais — do suporte ao site de cliente.',
+    lead: 'Ferramentas e sites que desenvolvi para resolver problemas reais — prioridade para a área de TI.',
     items: [
+      {
+        icon: 'pulse',
+        title: 'Limpa Rede',
+        tag: 'Ferramenta Windows · Redes',
+        text: 'Ferramenta Windows para diagnóstico e recuperação de problemas de conectividade: simulação de reparos antes de executar, limpeza de cache DNS, verificação do arquivo hosts com backup e logs de todas as operações.',
+        tags: ['Python', 'Windows', 'Redes', 'DNS'],
+        link: { href: 'https://github.com/Vinenuness/Limpa-rede', label: 'Ver no GitHub' },
+        download: { href: 'https://github.com/Vinenuness/Limpa-rede/releases/latest', label: 'Baixar (v1.0.1)' },
+        highlight: 'Download disponível — release v1.0.1'
+      },
       {
         icon: 'bolt',
         title: 'Wind Optimizer',
@@ -216,15 +223,6 @@ window.PORTFOLIO_DATA = {
         tags: ['PowerShell', 'Windows', 'WPF', 'Automação'],
         link: { href: 'https://github.com/Vinenuness/optimizer-win', label: 'Ver no GitHub' },
         highlight: 'Release v1.0.0 disponível para download'
-      },
-      {
-        icon: 'pulse',
-        title: 'Limpa Rede',
-        tag: 'Ferramenta Windows',
-        text: 'Ferramenta gratuita de diagnóstico e reparo de rede: simulação de reparos antes de executar, limpeza de cache DNS, verificação do arquivo hosts com backup e logs de todas as operações. Foco em segurança e transparência.',
-        tags: ['Python', 'Windows', 'Redes', 'DNS'],
-        link: { href: 'https://github.com/Vinenuness/Limpa-rede', label: 'Ver no GitHub' },
-        highlight: 'Download disponível — release v1.0.1'
       },
       {
         icon: 'laptop',
@@ -353,18 +351,19 @@ window.PORTFOLIO_DATA = {
     groups: [
       { name: 'Suporte e Operações', icon: 'desktop',
         items: ['Suporte N1/N2/N3', 'Troubleshooting', 'Gestão de chamados', 'Atendimento a usuários',
-                'Implantação de sistemas', 'Documentação'] },
+                'Implantação de sistemas'] },
       { name: 'Infraestrutura', icon: 'network',
-        items: ['Windows', 'Linux', 'Redes', 'Servidores', 'Nextcloud', 'Backup', 'Nginx', 'VPN'] },
+        items: ['Windows', 'Linux', 'Redes', 'Servidores', 'Nextcloud', 'Backup', 'VPN'] },
       { name: 'Automação', icon: 'gear',
         items: ['Python', 'Scripts', 'Batch', 'PowerShell', 'Agentes Windows'] },
       { name: 'Desenvolvimento', icon: 'laptop',
-        items: ['Python', 'Flask', 'SQL', 'REST API', 'PHP', 'HTML', 'CSS', 'JavaScript'] },
+        items: ['Python', 'Flask', 'SQL', 'REST API', 'PHP', 'JavaScript'] },
       { name: 'Dados', icon: 'chart',
-        items: ['Power BI', 'Excel Avançado', 'SQL', 'Pandas', 'NumPy', 'Linguagem R'] },
+        items: ['Power BI', 'Excel', 'SQL', 'Pandas', 'NumPy', 'R'] },
+      { name: 'Cloud', icon: 'cloud',
+        items: ['AWS', 'AWS Glue', 'SageMaker', 'API Gateway'] },
       { name: 'Segurança e Governança', icon: 'shield',
-        items: ['Cibersegurança', 'LGPD', 'Controle de acesso', 'Gestão de incidentes',
-                'Análise de vulnerabilidades', 'ITIL', 'COBIT'] },
+        items: ['LGPD', 'Cibersegurança', 'Controle de acesso', 'Gestão de incidentes', 'ITIL', 'COBIT'] },
       { name: 'Ferramentas', icon: 'tools',
         items: ['Git/GitHub', 'Nextcloud', 'TOTVS Protheus', 'AnyDesk', 'Microsoft 365', 'Jira'] }
     ]
@@ -437,7 +436,7 @@ window.PORTFOLIO_DATA = {
   /* -------------------------------------------------------- contato - */
   contact: {
     title: 'Vamos conversar sobre tecnologia?',
-    lead: 'Disponível para oportunidades em TI — suporte, infraestrutura e operações.',
+    lead: 'Disponível para oportunidades em TI, infraestrutura, automação, desenvolvimento e operações.',
     status: 'Disponível para oportunidades em TI',
     buttons: {
       linkedin: { label: 'LinkedIn' },
@@ -459,7 +458,6 @@ window.PORTFOLIO_DATA = {
     { label: 'Experiência', href: '#experiencia' },
     { label: 'Projetos', href: '#projetos' },
     { label: 'Competências', href: '#competencias' },
-    { label: 'Sobre', href: '#sobre' },
     { label: 'Formação', href: '#formacao' },
     { label: 'Contato', href: '#contato' }
   ],

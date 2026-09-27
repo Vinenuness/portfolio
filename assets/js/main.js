@@ -118,6 +118,21 @@
 
   bindData();
 
+  /* --------------------------------- certificados: ver todos ---------- */
+  const certsToggle = document.getElementById('certs-toggle');
+  if (certsToggle) {
+    const chevron = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+    const total = certsToggle.textContent.match(/\((\d+)\)/);
+    const n = total ? total[1] : '';
+    certsToggle.addEventListener('click', () => {
+      const extra = document.getElementById('certs-extra');
+      if (!extra) return;
+      const open = extra.classList.toggle('is-hidden') === false;
+      certsToggle.setAttribute('aria-expanded', String(open));
+      certsToggle.innerHTML = (open ? 'Mostrar menos ' : 'Ver todos os certificados (' + n + ') ') + chevron;
+    });
+  }
+
   /* ------------------------------------------------- menu mobile ------ */
   const toggle = document.querySelector('.nav-toggle');
   const mobile = document.querySelector('.nav-mobile');

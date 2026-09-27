@@ -141,15 +141,15 @@ def hexc(h):
     h = h.lstrip('#')
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
-# cores da paleta (nomes legados VIOLET/MAGENTA mantidos por compatibilidade)
-BG     = hexc('0C0915')
-GRID   = hexc('1A1226')
-BORDER = hexc('322452')
-WHITE  = hexc('F2EFF9')
-VIOLET  = hexc('A78BFA')
-MAGENTA = hexc('E879F9')
-GRAY   = hexc('C0B6D4')
-GRAY2  = hexc('8B7FA6')
+# cores da paleta v2.0 — azul corporativo (nomes legados mantidos)
+BG     = hexc('080B12')
+GRID   = hexc('101A2B')
+BORDER = hexc('243244')
+WHITE  = hexc('F8FAFC')
+VIOLET  = hexc('38BDF8')
+MAGENTA = hexc('8B5CF6')
+GRAY   = hexc('94A3B8')
+GRAY2  = hexc('64748B')
 
 def backdrop(c, step=80):
     for x in range(0, c.w, step):
@@ -161,8 +161,8 @@ def backdrop(c, step=80):
 
 # ---------------------------------------------------------------- favicon
 def monogram(scale):
-    c = Canvas(64, 64, hexc('120C1E'))
-    c.outline(0, 0, 64, 64, hexc('2E2247'))
+    c = Canvas(64, 64, hexc('0D1320'))
+    c.outline(0, 0, 64, 64, hexc('243244'))
     w = 2 * (5 * scale) + scale          # "VN" com 1*scale de gap
     h = 7 * scale
     x, y = (64 - w) // 2, (64 - h) // 2
@@ -212,8 +212,8 @@ def main():
     write_ico(os.path.join(out, 'favicon.ico'), [monogram(1), monogram(2), monogram(3)])
     sizes['favicon.ico'] = os.path.getsize(os.path.join(out, 'favicon.ico'))
     # apple touch icon 180x180
-    ap = Canvas(180, 180, hexc('120C1E'))
-    ap.outline(0, 0, 180, 180, hexc('2E2247'))
+    ap = Canvas(180, 180, hexc('0D1320'))
+    ap.outline(0, 0, 180, 180, hexc('243244'))
     sc = 12
     w = 2 * (5 * sc) + sc; h = 7 * sc
     ap.text((180 - w) // 2, (180 - h) // 2, 'V', sc, WHITE)
@@ -223,12 +223,12 @@ def main():
     # favicon vetorial (svg de fallback moderno)
     with open(os.path.join(out, 'favicon.svg'), 'w', encoding='utf-8') as f:
         f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
-                '<rect width="64" height="64" rx="12" fill="#120C1E"/>'
-                '<rect x="1" y="1" width="62" height="62" rx="11" fill="none" stroke="#2E2247"/>'
+                '<rect width="64" height="64" rx="12" fill="#0D1320"/>'
+                '<rect x="1" y="1" width="62" height="62" rx="11" fill="none" stroke="#243244"/>'
                 '<text x="30" y="42" font-family="Arial,Helvetica,sans-serif" font-size="28" '
-                'font-weight="700" fill="#F2EFF9" text-anchor="middle">V</text>'
+                'font-weight="700" fill="#F8FAFC" text-anchor="middle">V</text>'
                 '<text x="46" y="42" font-family="Arial,Helvetica,sans-serif" font-size="28" '
-                'font-weight="700" fill="#A78BFA" text-anchor="middle">N</text></svg>')
+                'font-weight="700" fill="#38BDF8" text-anchor="middle">N</text></svg>')
 
     # ------------------------------------------------ OG principal 1200x630
     og = Canvas(1200, 630, BG)
@@ -238,10 +238,10 @@ def main():
     og.rect(48, 130, 4, 190, VIOLET)
     og.text(72, 130, 'VINICIUS', 11, WHITE)
     og.text(72, 226, 'NUNES', 11, WHITE)
-    og.text(72, 340, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 3, hexc('F0ABFC'))
+    og.text(72, 340, 'ANALISTA DE TECNOLOGIA DA INFORMAÇÃO', 3, hexc('7DD3FC'))
     og.rect(64, 392, 700, 1, BORDER)
     og.text(64, 416, 'SUPORTE · INFRAESTRUTURA · AUTOMAÇÃO · OPERAÇÕES DE TI', 3, GRAY, tracking=1)
-    og.chip(64, 468, 'SUPORTE N1/N2/N3', 3, hexc('F0ABFC'), BORDER)
+    og.chip(64, 468, 'SUPORTE N1/N2/N3', 3, hexc('7DD3FC'), BORDER)
     og.chip(64, 524, '15H/SEMANA ECONOMIZADAS COM AUTOMAÇÕES', 3, GRAY, BORDER)
     og.text(64, 580, 'GARÇA-SP · DISPONÍVEL PARA MUDANÇA E REMOTO', 3, GRAY2, tracking=1)
     og.rect(0, 624, 1200, 6, VIOLET)
@@ -271,7 +271,7 @@ def main():
     og2.text(64, 378, 'INVENTÁRIO · CHAMADOS · USUÁRIOS · UNIDADES · AUTOMAÇÕES · RELATÓRIOS', 3, GRAY, tracking=1)
     x = 64
     for label in ['PYTHON', 'FLASK', 'SQLITE', 'REST API', 'WINDOWS AGENT', 'NGINX']:
-        x += og2.chip(x, 430, label, 3, hexc('F0ABFC'), BORDER) + 14
+        x += og2.chip(x, 430, label, 3, hexc('7DD3FC'), BORDER) + 14
     og2.text(64, 540, 'DESENVOLVIDO POR VINICIUS NUNES · ANALISTA DE TI', 3, GRAY2, tracking=2)
     og2.rect(0, 624, 1200, 6, MAGENTA)
     sizes['og-ativofix.png'] = og2.save(os.path.join(out, 'img', 'og-ativofix.png'))
