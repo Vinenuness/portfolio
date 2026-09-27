@@ -53,6 +53,7 @@
 /* ---------------------------------------------------------- reset ----- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -348,10 +349,6 @@ button { font-family: inherit; }
 .certs-more .btn svg { transition: transform .2s ease; }
 .certs-more .btn[aria-expanded="true"] svg { transform: rotate(180deg); }
 .is-hidden { display: none !important; }
-@media (max-width: 940px) {
-  .about-intro { grid-template-columns: 1fr; justify-items: center; text-align: left; }
-  .about-photo { width: min(200px, 56vw); }
-}
 
 /* ------------------------------------------------------ sobre --------- */
 .about-intro {
@@ -705,6 +702,8 @@ button { font-family: inherit; }
   .hero-grid { grid-template-columns: 1fr; gap: 46px; }
   .portrait-wrap { order: -1; }
   .portrait { width: min(240px, 64%); }
+  .about-intro { grid-template-columns: 1fr; justify-items: center; gap: 36px; }
+  .about-photo { width: min(200px, 56vw); }
   .about-grid { grid-template-columns: 1fr; }
   .project-top { grid-template-columns: 1fr; }
   .case-split { grid-template-columns: 1fr; }
