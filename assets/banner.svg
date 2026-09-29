@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Portfólio — Vinicius Nunes da Silva">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="paccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a371f7"/>
+      <stop offset="1" stop-color="#f778ba"/>
+    </linearGradient>
+    <linearGradient id="pmono" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a371f7"/>
+      <stop offset="1" stop-color="#f778ba"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#pbg)"/>
+
+  <!-- blocos de layout (decoração) -->
+  <g opacity="0.5">
+    <rect x="800" y="42" width="90" height="12" rx="6" fill="#30363d"/>
+    <rect x="800" y="66" width="140" height="12" rx="6" fill="#30363d"/>
+    <rect x="800" y="90" width="110" height="12" rx="6" fill="#30363d"/>
+    <rect x="800" y="122" width="240" height="80" rx="10" fill="none" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="830" cy="162" r="14" fill="none" stroke="#a371f7" stroke-width="2" opacity="0.8"/>
+    <rect x="856" y="152" width="150" height="8" rx="4" fill="#30363d"/>
+    <rect x="856" y="168" width="110" height="8" rx="4" fill="#30363d"/>
+  </g>
+  <circle cx="1130" cy="260" r="130" fill="#a371f7" opacity="0.08"/>
+  <circle cx="60" cy="285" r="90" fill="#f778ba" opacity="0.06"/>
+
+  <!-- monograma: chaves de código </> -->
+  <circle cx="110" cy="98" r="40" fill="none" stroke="url(#pmono)" stroke-width="3"/>
+  <text x="110" y="109" text-anchor="middle" font-family="Consolas, monospace" font-size="26" font-weight="700" fill="#e6edf3">&lt;/&gt;</text>
+
+  <!-- nome -->
+  <text x="185" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700" fill="#e6edf3" letter-spacing="1">PORTFÓLIO</text>
+
+  <!-- barra de destaque -->
+  <rect x="60" y="150" width="220" height="5" rx="2.5" fill="url(#paccent)"/>
+
+  <!-- subtítulo -->
+  <text x="60" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#8b949e" letter-spacing="3">VINICIUS NUNES DA SILVA · ANALISTA DE TI</text>
+
+  <!-- linha final -->
+  <text x="60" y="254" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#8b949e">HTML · CSS · JavaScript puro · Sem build · Sem dependências</text>
+</svg>

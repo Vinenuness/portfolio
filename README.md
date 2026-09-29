@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/banner.svg" alt="Portfólio — Vinicius Nunes da Silva" width="100%"/>
+
+</div>
+
 # Portfólio — Vinicius Nunes da Silva
 
 Portfólio profissional de **Vinicius Nunes da Silva**, Analista de Tecnologia da Informação
